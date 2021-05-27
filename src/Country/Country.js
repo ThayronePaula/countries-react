@@ -14,60 +14,68 @@ const Country = () => {
       console.log(json);
       setCountry(json);
     };
-    countryApi(`https://restcountries.eu/rest/v2/name/${id}`);
+    countryApi(`https://restcountries.eu/rest/v2/alpha/${id}`);
   }, [id]);
 
   if (!country) return null;
+
   return (
-    <section>
+    <section className='animeLeft' >
       <Link to="/">
         <button>Back</button>
       </Link>
 
-      {country.map((item) => (
-        <div className={styles.firstCountry} key={item.numericCode}>
-          <div className={styles.wrapper}>
-            <img src={item.flag} alt={item.name} />
-          </div>
-          <div className={styles.leftContent}>
-            <h2>{item.name}</h2>
-            <div className={styles.description}>
-              <div>
-                <h4>
-                  Native name: <span> {item.nativeName} </span>
-                </h4>
-                <h4>
-                  Population: <span> {item.population} </span>
-                </h4>
-                <h4>
-                  Region: <span> {item.region} </span>
-                </h4>
-                <h4>
-                  Sub Region: <span> {item.subregion} </span>
-                </h4>
-                <h4>
-                  Capital: <span> {item.capital} </span>
-                </h4>
-              </div>
+      <div className={styles.firstCountry} key={country.numericCode}>
+        <div className={styles.wrapper}>
+          <img src={country.flag} alt={country.name} />
+        </div>
+        <div className={styles.leftContent}>
+          <h2>{country.name}</h2>
+          <div className={styles.description}>
+            <div>
+              <h4>
+                Native name: <span> {country.nativeName} </span>
+              </h4>
+              <h4>
+                Population: <span> {country.population} </span>
+              </h4>
+              <h4>
+                Region: <span> {country.region} </span>
+              </h4>
+              <h4>
+                Sub Region: <span> {country.subregion} </span>
+              </h4>
+              <h4>
+                Capital: <span> {country.capital} </span>
+              </h4>
+            </div>
 
-              <div>
-                <h4>
-                  Top Level Domain: <span> {item.topLevelDomain} </span>
-                </h4>
+            <div>
+              <h4>
+                Top Level Domain: <span> {country.topLevelDomain} </span>
+              </h4>
 
-                {item.currencies.map(({ name }) => (
-                  <h4 key={name}>
-                    Currencies: <span>{name}</span>
-                  </h4>
-                ))}
-                <h4>
-                  Languages: <span>{item.languages.map(({name}) => `${name} `)}</span>
+              {country.currencies.map(({ name }) => (
+                <h4 key={name}>
+                  Currencies: <span>{name}</span>
                 </h4>
-              </div>
+              ))}
+              <h4>
+                Languages:
+                <span>{country.languages.map(({ name }) => `${name} `)}</span>
+              </h4>
             </div>
           </div>
+          <div className={styles.borderCountry}>
+            <span>Border Countries:</span>{" "}
+            {country.borders.map((country) => (
+              <Link to={`/country/${country.toLowerCase()}`} key={country}>
+                {country}
+              </Link>
+            ))}
+          </div>
         </div>
-      ))}
+      </div>
     </section>
   );
 };

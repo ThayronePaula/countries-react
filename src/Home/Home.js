@@ -25,9 +25,9 @@ const Home = () => {
       <ul className={styles.card}>
         {filter &&
           filter.map(
-            ({ name, flag, numericCode, population, region, capital }) => (
+            ({alpha3Code, name, flag, numericCode, population, region, capital }) => (
               <li key={numericCode}>
-                <Link to={`/country/${name.toLowerCase()}`}>
+                <Link to={`/country/${alpha3Code.toLowerCase()}`}>
                   <div className={styles.wrapper}>
                     <img src={flag} alt={name} />
                   </div>
