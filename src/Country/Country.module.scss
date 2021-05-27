@@ -1,0 +1,47 @@
+.firstCountry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+  .wrapper {
+
+    width: 30rem;
+    max-width: 100%;
+
+
+  }
+
+}
+
+.leftContent {
+  flex: 1;
+  width: 50%;
+  padding: 3rem 0;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: .7rem;
+    
+
+
+
+    h4 {
+      margin: .5rem 0;
+      font-size: 1rem;
+
+      span {
+        font-weight: 400;
+        font-size: .9rem;
+      }
+    }
+  }
+}

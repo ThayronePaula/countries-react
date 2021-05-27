@@ -1,0 +1,17 @@
+.select {
+  padding: 1rem 1rem;
+  outline: none;
+  border: none;
+  box-shadow: 1px 1px 5px #aaa;
+
+  &:hover,
+  &:active {
+    box-shadow: 0px 0px 0px 1px #aaa;
+
+  }
+
+  option{
+    margin-top: 1rem;
+    align-items: center;
+  }
+}

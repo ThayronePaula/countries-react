@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 import { MainContext } from "./CountryContext";
 
 import "./App.scss";
+import Country from "./Country/Country";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/country/:id" element={<Country />} />
+
           </Routes>
       </div>
         </MainContext>

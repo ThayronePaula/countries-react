@@ -1,13 +1,16 @@
 import React from "react";
+import { DebounceInput } from "react-debounce-input";
 import { CountryContext } from "../CountryContext";
 import styles from './Input.module.scss'
 
 const Input = () => {
   const { seach, setSearch } = React.useContext(CountryContext);
   return (
-    <input
+    <DebounceInput
       className={styles.seachInput}
       value={seach}
+      minLength={3}
+      debounceTimeout={500}
       onChange={({ target }) => setSearch(target.value)}
       placeholder='Search for a country...'
     />
