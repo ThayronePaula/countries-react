@@ -24,9 +24,6 @@
     width: 1rem;
   }
 
-
-
-
   &:hover,
   &:focus {
     outline: none;
@@ -41,8 +38,8 @@
 .firstCountry {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  height: 324px;
+  gap: 2rem;
+  // height: 324px;
 
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
@@ -53,7 +50,7 @@
     max-width: 100%;
 
     img {
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 
@@ -64,7 +61,6 @@
   width: 50%;
   padding: 2rem 0;
 
-  h2 {}
 
   .description {
     display: grid;
@@ -108,5 +104,22 @@
 
 
     }
+  }
+}
+@media (max-width:955px){
+.allPage{
+  padding: 0 3%;
+}
+}
+
+@media (max-width:710px){
+
+  .firstCountry {
+   flex-direction: column;
+   justify-content: center;
+    
+  }
+  .leftContent {
+    width: 100%;
   }
 }

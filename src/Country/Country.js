@@ -21,7 +21,7 @@ const Country = () => {
   if (!country) return null;
 
   return (
-    <section className="animeLeft">
+    <section className={`${styles.allPage} animeLeft`}>
       <Link to="/" className={styles.click}>
         <button className={styles.back}>
           <Arrow />

@@ -52,9 +52,10 @@
 
 
 @media (max-width:960px) {
-  .searchField{
+  .searchField {
     padding: 0 3%;
   }
+
   .card {
     display: grid;
     grid-template-columns: 1fr;
@@ -87,12 +88,50 @@
     display: block;
     padding: 0 3%;
 
-    input{
+    input {
       margin-bottom: 1rem;
       width: 100%;
     }
-    select{
+
+    select {
       width: 50%;
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .card {
+    padding: 0 10%;
+
+    li {
+      margin: 0 auto;
+      height: 40vh;
+      width: 100%;
+
+
+      .wrapper {
+        min-height: 40%;
+        position: relative;
+
+        img {
+          object-fit: contain;
+          position: absolute;
+          // top: -18px;
+
+        }
+      }
+
+
+      .description {
+        min-height: 60%;
+      }
+    }
+  }
+
+  
+  .searchField {
+    select {
+      width: 100%;
     }
   }
 }
