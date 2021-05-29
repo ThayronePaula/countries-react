@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import styles from "./Country.module.scss";
+import { ReactComponent as Arrow } from "../assets/left-arrow.svg";
 
 const Country = () => {
   const [country, setCountry] = React.useState(null);
@@ -20,9 +21,12 @@ const Country = () => {
   if (!country) return null;
 
   return (
-    <section className='animeLeft' >
-      <Link to="/">
-        <button>Back</button>
+    <section className="animeLeft">
+      <Link to="/" className={styles.click}>
+        <button className={styles.back}>
+          <Arrow />
+          <p>Back</p>
+        </button>
       </Link>
 
       <div className={styles.firstCountry} key={country.numericCode}>
@@ -67,7 +71,7 @@ const Country = () => {
             </div>
           </div>
           <div className={styles.borderCountry}>
-            <span>Border Countries:</span>{" "}
+            <span>Border Countries:</span>
             {country.borders.map((country) => (
               <Link to={`/country/${country.toLowerCase()}`} key={country}>
                 {country}

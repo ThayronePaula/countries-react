@@ -10,16 +10,15 @@ import Country from "./Country/Country";
 const App = () => {
   return (
     <BrowserRouter>
-        <MainContext>
-      <Header />
-      <div className="container">
+      <MainContext>
+        <Header />
+        <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/country/:id" element={<Country />} />
-
           </Routes>
-      </div>
-        </MainContext>
+        </div>
+      </MainContext>
     </BrowserRouter>
   );
 };

@@ -7,7 +7,7 @@
 
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
   gap: 3rem;
   margin: 0 auto;
 }
@@ -46,6 +46,53 @@
     span {
       font-weight: 400;
       font-family: .7rem;
+    }
+  }
+}
+
+
+@media (max-width:960px) {
+  .searchField{
+    padding: 0 3%;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding: 0 3%;
+
+    li {
+      height: 70vh;
+
+
+      .wrapper {
+        min-height: 70%;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+
+      .description {
+        min-height: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width:640px) {
+
+  .searchField {
+    display: block;
+    padding: 0 3%;
+
+    input{
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    select{
+      width: 50%;
     }
   }
 }

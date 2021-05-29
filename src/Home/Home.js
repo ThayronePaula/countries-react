@@ -12,7 +12,7 @@ const Home = () => {
   if (data === null) return null;
 
   return (
-    <section>
+    <section className="animeLeft">
       <div className={styles.searchField}>
         <Input />
         <Select
@@ -25,7 +25,15 @@ const Home = () => {
       <ul className={styles.card}>
         {filter &&
           filter.map(
-            ({alpha3Code, name, flag, numericCode, population, region, capital }) => (
+            ({
+              alpha3Code,
+              name,
+              flag,
+              numericCode,
+              population,
+              region,
+              capital,
+            }) => (
               <li key={numericCode}>
                 <Link to={`/country/${alpha3Code.toLowerCase()}`}>
                   <div className={styles.wrapper}>
