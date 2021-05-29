@@ -18,3 +18,10 @@
 
 }
 
+@media (max-width:400px) {
+  .header {
+    p {
+      display: none;
+    }
+  }
+}

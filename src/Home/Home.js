@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CountryContext } from "../CountryContext";
+import Head from "../Head/Head";
 import Input from "../Inputs/Input";
 import Select from "../Inputs/Select";
 import styles from "./Home.module.scss";
@@ -13,6 +14,7 @@ const Home = () => {
 
   return (
     <section className="animeLeft">
+      <Head title='Home | Countries' description='Home page countries' />
       <div className={styles.searchField}>
         <Input />
         <Select

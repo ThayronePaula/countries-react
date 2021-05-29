@@ -63,7 +63,7 @@
     padding: 0 3%;
 
     li {
-      height: 70vh;
+      height: 40rem;
 
 
       .wrapper {
@@ -105,25 +105,25 @@
 
     li {
       margin: 0 auto;
-      height: 40vh;
+      height: 20rem;
       width: 100%;
 
 
       .wrapper {
-        min-height: 40%;
-        position: relative;
+        min-height: 50%;
+        
 
         img {
-          object-fit: contain;
-          position: absolute;
-          // top: -18px;
+          object-fit: fill;
+        
+         
 
         }
       }
 
 
       .description {
-        min-height: 60%;
+        min-height: 50%;
       }
     }
   }

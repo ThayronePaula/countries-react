@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import styles from "./Country.module.scss";
 import { ReactComponent as Arrow } from "../assets/left-arrow.svg";
+import Head from "../Head/Head";
 
 const Country = () => {
   const [country, setCountry] = React.useState(null);
@@ -12,7 +13,7 @@ const Country = () => {
     const countryApi = async (url) => {
       const response = await fetch(url);
       const json = await response.json();
-      console.log(json);
+      // console.log(json);
       setCountry(json);
     };
     countryApi(`https://restcountries.eu/rest/v2/alpha/${id}`);
@@ -22,6 +23,7 @@ const Country = () => {
 
   return (
     <section className={`${styles.allPage} animeLeft`}>
+      <Head title={`Country | ${country.name}`} description={`Information about ${country.name}`} />
       <Link to="/" className={styles.click}>
         <button className={styles.back}>
           <Arrow />

@@ -20,7 +20,7 @@ export const MainContext = ({ children }) => {
   }, []);
 
   React.useEffect(() => {
-    if (search  ) {
+    if (search) {
       const searchLower = search.toLowerCase();
       const dataFilter = data.filter(({ name }) =>
         name.toLowerCase().includes(searchLower)
@@ -29,8 +29,8 @@ export const MainContext = ({ children }) => {
     } else if (continent) {
       const region = data && data.filter(({ region }) => region === continent);
       setFilter(region);
-    }else{
-      setFilter(data)
+    } else {
+      setFilter(data);
     }
   }, [data, search, continent]);
 

@@ -25,7 +25,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:active {
     outline: none;
     box-shadow: 0 0 0 2px #ccc;
   }
@@ -39,9 +39,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  // height: 324px;
 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 
   .wrapper {

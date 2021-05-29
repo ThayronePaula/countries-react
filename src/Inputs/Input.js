@@ -10,7 +10,7 @@ const Input = () => {
       className={styles.seachInput}
       value={seach}
       minLength={3}
-      debounceTimeout={500}
+      debounceTimeout={300}
       onChange={({ target }) => setSearch(target.value)}
       placeholder='Search for a country...'
     />
