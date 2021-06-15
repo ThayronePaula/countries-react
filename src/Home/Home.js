@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <section className="animeLeft">
-      <Head title='Home | Countries' description='Home page countries' />
+      <Head title="Home | Countries" description="Home page countries" />
       <div className={styles.searchField}>
         <Input />
         <Select
